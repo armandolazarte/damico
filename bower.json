@@ -1,0 +1,17 @@
+{
+  "name": "Damico",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "components-font-awesome": "~4.2.0",
+    "bootstrap": "~3.3.4",
+    "ekko-lightbox": "4.0.1"
+  }
+}

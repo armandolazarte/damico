@@ -1,0 +1,32 @@
+[
+    {
+        "name": "grande",
+        "size": "65x35",
+        "price": 1200, 
+        "images": [
+            "http://1.bp.blogspot.com/-8BDlacVDhFo/VDSjuiFEt3I/AAAAAAAAAJ4/Mf-yfxJSZ0o/s1600/07.JPG", 
+            "http://2.bp.blogspot.com/-dbUraETkff8/VDSotlWMIfI/AAAAAAAAAKQ/08OJCJoxLhg/s1600/10291087_552655761437570_3261844345838757881_n.jpg", 
+            "http://1.bp.blogspot.com/-8BDlacVDhFo/VDSjuiFEt3I/AAAAAAAAAJ4/Mf-yfxJSZ0o/s1600/07.JPG", 
+            "http://2.bp.blogspot.com/-dbUraETkff8/VDSotlWMIfI/AAAAAAAAAKQ/08OJCJoxLhg/s1600/10291087_552655761437570_3261844345838757881_n.jpg"
+        ]
+    },
+    {
+        "name": "mediana", 
+        "size": "50x30",
+        "price": 1400, 
+        "images": [
+            "http://4.bp.blogspot.com/-MR-6qKa02XM/VDSg2qRWAVI/AAAAAAAAAJU/ac3NDauQ36g/s1600/07.JPG", 
+            "https://scontent-gru2-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10012564_721131257972985_7462565027252146987_n.jpg?oh=42e9a754500d4db815bc40aa1b9a04e7&oe=5724C7AF", 
+            "http://1.bp.blogspot.com/-9OiYDeV59MQ/VlXKFfTYCaI/AAAAAAAAARE/Qp75iiFCd1Y/s1600/Pl%2B1.jpg"
+        ]
+    },
+    {
+        "name": "chica",
+        "size": "35x30", 
+        "price": 2000, 
+        "images": [
+            "http://2.bp.blogspot.com/-pINfca0OuYk/VDSN0936IlI/AAAAAAAAAIs/DK-t805aI-E/s1600/08.JPG", 
+            "http://3.bp.blogspot.com/-LisRcfia5SM/VDSp_TjrP6I/AAAAAAAAAKs/8jMyjZy1anA/s1600/mar.jpg"
+        ]
+    }
+]
