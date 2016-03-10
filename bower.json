@@ -12,6 +12,7 @@
     "jquery": "~2.0.3",
     "components-font-awesome": "~4.2.0",
     "bootstrap": "~3.3.4",
-    "ekko-lightbox": "4.0.1"
+    "ekko-lightbox": "4.0.1",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.37"
   }
 }

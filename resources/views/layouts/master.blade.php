@@ -48,10 +48,10 @@
 
                             <div class="collapse navbar-collapse" id="navbar">
                                 <ul id="nav-main" class="nav navbar-nav">
-                                    <li><a href="{{ route('nodriza') }}">NODRIZA</a></li>
-                                    <li><a href="{{ route('plataformas') }}">PLATAFORMAS</a></li>
+                                    <li class="{{ active('nodriza') }}"><a href="{{ route('nodriza') }}">NODRIZA</a></li>
+                                    <li class="{{ active('plataformas') }}"><a href="{{ route('plataformas') }}">PLATAFORMAS</a></li>
                                     <li><a href="">ARTISTAS</a></li>
-                                    <li><a href="{{ route('faq') }}">PREGUNTAS FRECUENTES</a></li>
+                                    <li class="{{ active('faq') }}"><a href="{{ route('faq') }}">PREGUNTAS FRECUENTES</a></li>
                                 </ul>
                                 <ul id="social" class="nav navbar-nav navbar-right">
                                     <li><a href="https://www.facebook.com/damicoefectos" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>

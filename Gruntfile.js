@@ -1,12 +1,13 @@
 var sarasa = [
     "./bower_components/jquery/jquery.js",
-    "./bower_components/bootstrap/dist/js/bootstrap.js",
-    /*"./bower_components/bootstrap/js/carousel.js",
+    //"./bower_components/bootstrap/dist/js/bootstrap.js",
+    "./bower_components/bootstrap/js/carousel.js",
     "./bower_components/bootstrap/js/collapse.js",
     "./bower_components/bootstrap/js/transition.js",
     "./bower_components/bootstrap/js/tab.js",
-    "./bower_components/bootstrap/js/modal.js",*/
+    "./bower_components/bootstrap/js/modal.js",
     "./bower_components/ekko-lightbox/dist/ekko-lightbox.min.js",
+    "./bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicket.min.js",
     "./resources/assets/js/*.js"
 ];
                 
@@ -44,7 +45,8 @@ module.exports = function(grunt) {
                     "./public/css/lib.css": [
                         "./bower_components/bootstrap/dist/css/bootstrap.min.css",
                         "./bower_components/components-font-awesome/css/font-awesome.min.css",
-                        "./bower_components/ekko-lightbox/dist/ekko-lightbox.css"
+                        "./bower_components/ekko-lightbox/dist/ekko-lightbox.css",
+                        "./bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicket.min.css"
                     ]
                 }
             }
