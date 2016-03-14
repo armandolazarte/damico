@@ -7,7 +7,9 @@ var sarasa = [
     "./bower_components/bootstrap/js/tab.js",
     "./bower_components/bootstrap/js/modal.js",
     "./bower_components/ekko-lightbox/dist/ekko-lightbox.min.js",
-    "./bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicket.min.js",
+    "./bower_components/moment/moment.js",
+    "./bower_components/moment/locale/es.js",
+    "./bower_components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js",
     "./resources/assets/js/*.js"
 ];
                 
@@ -46,7 +48,7 @@ module.exports = function(grunt) {
                         "./bower_components/bootstrap/dist/css/bootstrap.min.css",
                         "./bower_components/components-font-awesome/css/font-awesome.min.css",
                         "./bower_components/ekko-lightbox/dist/ekko-lightbox.css",
-                        "./bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicket.min.css"
+                        "./bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"
                     ]
                 }
             }

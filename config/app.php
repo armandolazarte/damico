@@ -156,7 +156,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        Watson\Active\ActiveServiceProvider::class
+        Collective\Html\HtmlServiceProvider::class,
+        Watson\Active\ActiveServiceProvider::class,
+        Crhayes\Validation\ValidationServiceProvider::class,
 
     ],
 
@@ -204,7 +206,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
 
-        'Active'    => Watson\Active\Facades\Active::class
+        'Form'      => Collective\Html\FormFacade::class,
+        'Html'      => Collective\Html\HtmlFacade::class,
+        'Active'    => Watson\Active\Facades\Active::class,
+        'GroupedValidator' => Crhayes\Validation\Facade::class
 
     ],
 

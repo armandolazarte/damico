@@ -18,22 +18,8 @@
                 <div class="panel-heading">Acceso Administrador</div>
                 <div class="panel-body">
 
-                    @if (count($errors))
-                        <div class="alert alert-danger">
-                            <p><strong>Whoops!</strong> There were some problems with your input.</p>
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
-
-                    @if (session('logout_msg'))
-                        <div class="alert alert-success">
-                            {{ session('logout_msg') }}
-                        </div>
-                    @endif                                 
+                    @include('admin.errors')
+                    @include('admin.success')                                 
 
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}" />

@@ -75,9 +75,10 @@ Route::group(['middleware' => ['web']], function() {
         'middleware' => 'auth',
         'prefix' => 'admin'
     ], function() {
-        Route::get('/', ['uses' => 'PostController@index']);
-        Route::resource('post', 'PostController');
-        Route::resource('tag', 'TagController');    
+        Route::get('/', function() {
+            return view('admin.welcome');
+        });
+        Route::resource('quotas', 'QuotasController');  
     });
 
 });
