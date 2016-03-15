@@ -8,7 +8,8 @@
         <link rel="icon" type="image/png" href="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="." />
-        <link media="all" type="text/css" rel="stylesheet" href="/css/lib.css" />  
+        <link media="all" type="text/css" rel="stylesheet" href="/css/lib.css" />
+        <script src="/js/damico.js"></script>
     </head>
     <body style="padding-top: 50px;">
 

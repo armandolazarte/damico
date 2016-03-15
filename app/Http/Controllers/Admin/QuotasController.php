@@ -19,7 +19,7 @@ class QuotasController extends Controller
      */
     public function index()
     {
-        return view('admin.quotas.index', ['quotas' => Quota::orderBy('start', 'desc')->get()]);   
+        return view('admin.quotas.index', ['quotas' => Quota::orderBy('start', 'desc')->paginate(2)]);   
     }
 
     /**
@@ -42,13 +42,15 @@ class QuotasController extends Controller
     {
         Validator::extend('sarasa', 'App\Validators\SarasaValidator@validate');
         $validator = Validator::make($request->all(), [
-            'start' => 'dateFormat:d/m/Y|after:yesterday|sarasa',
-            'end' => 'dateFormat:d/m/Y|after:start|sarasa',            
+            'start' => 'required|dateFormat:d/m/Y|after:yesterday|sarasa',
+            'end' => 'required|dateFormat:d/m/Y|after:start|sarasa',            
             'size' => 'required|integer|min:1|max:100',
         ], [
-            'start.dateFormat' => 'La fecha de inicio debe responder al formato DD/MM/AA',
+            'start.required' => 'La fecha de inicio es requerida.',
+            'start.dateFormat' => 'La fecha de inicio debe responder al formato DD/MM/AA.',
             'start.after' => 'La fecha de inicio debe ser al menos hoy.',
-            'end.dateFormat' => 'La fecha de fin debe responder al formato DD/MM/AA',
+            'end.required' => 'La fecha de fin es requerida.',
+            'end.dateFormat' => 'La fecha de fin debe responder al formato DD/MM/AA.',
             'end.after' => 'La fecha de fin debe ser posterior a la de inicio.',
             'size.max' => 'La cantidad no puede ser mayor que 100.',
             'size.min' => 'La cantidad debe ser al menos 1.',
@@ -59,7 +61,7 @@ class QuotasController extends Controller
             $quota = Quota::create($request->all());
             if ($quota->save()) {
                 return redirect()
-                    ->route('admin.quotas.create')
+                    ->route('admin.quotas.index')
                     ->with(['success_msg' => 'Se guardó piola.']);
             } else {
                 return redirect()

@@ -1,6 +1,7 @@
 var sarasa = [
     "./bower_components/jquery/jquery.js",
     //"./bower_components/bootstrap/dist/js/bootstrap.js",
+    "./bower_components/bootstrap/js/alert.js",
     "./bower_components/bootstrap/js/carousel.js",
     "./bower_components/bootstrap/js/collapse.js",
     "./bower_components/bootstrap/js/transition.js",

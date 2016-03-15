@@ -36,4 +36,6 @@
         @endforeach
     </table>
 
+    <div class="text-center">{!! $quotas->render() !!}</div>
+
 @stop
