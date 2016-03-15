@@ -18,7 +18,7 @@
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <div class="navbar-brand">
-                            DFX Admin
+                            <a href="{{ route('welcome') }}">DFX Admin</a>
                         </div>                            
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
@@ -30,7 +30,7 @@
 
                     <div class="collapse navbar-collapse" id="navbar">
                         <ul id="nav-main" class="nav navbar-nav">
-                            <li><a href="{{ route('admin.quotas.create') }}">CUPOS NODRIZA</a></li>
+                            <li><a href="{{ route('admin.quotas.index') }}">CUPOS NODRIZA</a></li>
                             <li><a href="{{ URL::to('/plataformas') }}">PEDIDOS NODRIZA</a></li>
                         </ul> 
                         <ul class="nav navbar-nav navbar-right">

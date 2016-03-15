@@ -19,7 +19,7 @@ class QuotasController extends Controller
      */
     public function index()
     {
-        
+        return view('admin.quotas.index', ['quotas' => Quota::orderBy('start', 'desc')->get()]);   
     }
 
     /**
@@ -42,14 +42,22 @@ class QuotasController extends Controller
     {
         Validator::extend('sarasa', 'App\Validators\SarasaValidator@validate');
         $validator = Validator::make($request->all(), [
-            'size' => 'required|integer|min:1|max:100'
+            'start' => 'dateFormat:d/m/Y|after:yesterday|sarasa',
+            'end' => 'dateFormat:d/m/Y|after:start|sarasa',            
+            'size' => 'required|integer|min:1|max:100',
+        ], [
+            'start.dateFormat' => 'La fecha de inicio debe responder al formato DD/MM/AA',
+            'start.after' => 'La fecha de inicio debe ser al menos hoy.',
+            'end.dateFormat' => 'La fecha de fin debe responder al formato DD/MM/AA',
+            'end.after' => 'La fecha de fin debe ser posterior a la de inicio.',
+            'size.max' => 'La cantidad no puede ser mayor que 100.',
+            'size.min' => 'La cantidad debe ser al menos 1.',
+            'size.required' => 'La cantidad es requerida.',
+            'size.integer' => 'La cantidad debe ser un número entero.'
         ]);
-        //var_dump($request->input('start'));
         if ($validator->passes()) {
             $quota = Quota::create($request->all());
-            //var_dump($quota->start);
             if ($quota->save()) {
-                //die();
                 return redirect()
                     ->route('admin.quotas.create')
                     ->with(['success_msg' => 'Se guardó piola.']);
@@ -86,7 +94,6 @@ class QuotasController extends Controller
      */
     public function edit($id)
     {
-        //
         return view('admin.quotas.edit', ['model' => Quota::find($id)]);
     }
 

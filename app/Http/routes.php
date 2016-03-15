@@ -40,10 +40,8 @@ Route::get('/nodriza', ['as' => 'nodriza', function() {
 }]);
 
 Route::get('/plataformas', ['as' => 'plataformas', function() {
-    $title = 'Plataformas'; 
     $data = json_decode(file_get_contents('data/plataformas.json'));
     return view('plataformas', [
-        'title' => $title,
         'types' => $data
     ]);
 }]);
@@ -75,9 +73,9 @@ Route::group(['middleware' => ['web']], function() {
         'middleware' => 'auth',
         'prefix' => 'admin'
     ], function() {
-        Route::get('/', function() {
+        Route::get('/', ['as' => 'welcome', function() {
             return view('admin.welcome');
-        });
+        }]);
         Route::resource('quotas', 'QuotasController');  
     });
 

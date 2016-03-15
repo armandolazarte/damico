@@ -39,11 +39,17 @@
         $(function() {
             $("#datetimepicker1, #datetimepicker2").datetimepicker({
                 format: "DD/MM/YYYY",
-                //locale: "en",
-                useCurrent: false,
                 ignoreReadonly: true,
                 minDate: moment(),
+                //locale: 'en',                
+                useCurrent: false                
             });
+            $("#datetimepicker1").on("dp.change", function(e) {
+                $('#datetimepicker2').data("DateTimePicker").minDate(e.date);
+            });
+            $("#datetimepicker2").on("dp.change", function(e) {
+                $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
+            });            
         });
-    </script>        
+    </script>
 {!! Form::close() !!} 
