@@ -1,5 +1,4 @@
 {!! Form::model($model, ['method' => 'post', 'route' => 'admin.quotas.store']) !!}
-    {{ var_dump($model) }}
     {!! Form::hidden('_token', csrf_token()) !!}
     <div class="row">
         <div class="col-md-2">

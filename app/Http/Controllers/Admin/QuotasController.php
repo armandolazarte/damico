@@ -19,7 +19,7 @@ class QuotasController extends Controller
      */
     public function index()
     {
-        return view('admin.quotas.index', ['quotas' => Quota::orderBy('start', 'desc')->paginate(2)]);   
+        return view('admin.quotas.index', ['quotas' => Quota::latest('start')->paginate(2)]);   
     }
 
     /**

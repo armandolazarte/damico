@@ -30,8 +30,8 @@
 
                     <div class="collapse navbar-collapse" id="navbar">
                         <ul id="nav-main" class="nav navbar-nav">
-                            <li><a href="{{ route('admin.quotas.index') }}">CUPOS NODRIZA</a></li>
                             <li><a href="{{ URL::to('/plataformas') }}">PEDIDOS NODRIZA</a></li>
+                            <li><a href="{{ route('admin.quotas.index') }}">CUPOS NODRIZA</a></li>                            
                         </ul> 
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="{{ route('logout') }}">Salir</a></li>

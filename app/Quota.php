@@ -12,6 +12,11 @@ class Quota extends Model
     protected $dates = ['start', 'end'];
     //protected $dateFormat = 'd/m/Y';
     
+    public function orders()
+    {
+        return $this->hasMany('Order');
+    }
+
     public function setStartAttribute($value)
     {
         $this->attributes['start'] = Carbon::createFromFormat('d/m/Y H:i:s', $value . ' 00:00:00');
@@ -20,7 +25,17 @@ class Quota extends Model
     public function setEndAttribute($value)
     {
         $this->attributes['end'] = Carbon::createFromFormat('d/m/Y H:i:s', $value . ' 00:00:00');
-    }      
+    }
+
+    public function getStartAttribute($value)
+    {
+        return Carbon::parse($value)->format('d/m/Y');
+    }
+
+    public function getEndAttribute($value)
+    {
+        return Carbon::parse($value)->format('d/m/Y');
+    }
 
     public function scopeActive($query)
     {
