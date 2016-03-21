@@ -89,9 +89,22 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'start' => [
+            'required' => 'La fecha de inicio es requerida.',
+            'date_format' => 'La fecha de inicio debe responder al formato DD/MM/AA.',
+            'after' => 'La fecha de inicio debe ser al menos hoy.',
         ],
+        'end' => [
+            'required' => 'La fecha de fin es requerida.',
+            'date_format' => 'La fecha de fin debe responder al formato DD/MM/AA.',
+            'after' => 'La fecha de fin debe ser posterior a la de inicio.',
+        ],
+        'size' => [
+            'max' => 'La cantidad no puede ser mayor que 100.',
+            'min' => 'La cantidad debe ser al menos 1.',
+            'required' => 'La cantidad es requerida.',
+            'integer' => 'La cantidad debe ser un número entero.'
+        ]
     ],
 
     /*

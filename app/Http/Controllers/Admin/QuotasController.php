@@ -10,8 +10,15 @@ use App\Http\Controllers\Controller;
 use App\Quota;
 use Validator;
 
+use App\RuleIdReplacerTrait;
+
 class QuotasController extends Controller
 {
+    public function __construct()
+    {
+        Validator::extend('sarasa', 'App\Validators\SarasaValidator@validate');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -29,7 +36,11 @@ class QuotasController extends Controller
      */
     public function create()
     {
-        return view('admin.quotas.create');
+        return view('admin.quotas.create', [
+            'form_model' => null,
+            'form_route' => 'admin.quotas.store',
+            'form_method' => 'post'
+        ]);
     }
 
     /**
@@ -39,42 +50,39 @@ class QuotasController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        Validator::extend('sarasa', 'App\Validators\SarasaValidator@validate');
-        $validator = Validator::make($request->all(), [
-            'start' => 'required|dateFormat:d/m/Y|after:yesterday|sarasa',
-            'end' => 'required|dateFormat:d/m/Y|after:start|sarasa',            
-            'size' => 'required|integer|min:1|max:100',
-        ], [
-            'start.required' => 'La fecha de inicio es requerida.',
-            'start.dateFormat' => 'La fecha de inicio debe responder al formato DD/MM/AA.',
-            'start.after' => 'La fecha de inicio debe ser al menos hoy.',
-            'end.required' => 'La fecha de fin es requerida.',
-            'end.dateFormat' => 'La fecha de fin debe responder al formato DD/MM/AA.',
-            'end.after' => 'La fecha de fin debe ser posterior a la de inicio.',
-            'size.max' => 'La cantidad no puede ser mayor que 100.',
-            'size.min' => 'La cantidad debe ser al menos 1.',
-            'size.required' => 'La cantidad es requerida.',
-            'size.integer' => 'La cantidad debe ser un número entero.'
-        ]);
+    {        
+        /*$validator = Validator::make($request->all(), Quota::$rules);
         if ($validator->passes()) {
             $quota = Quota::create($request->all());
             if ($quota->save()) {
                 return redirect()
                     ->route('admin.quotas.index')
-                    ->with(['success_msg' => 'Se guardó piola.']);
+                    ->with(['success_msg' => trans('Se guardó piola.')]);
             } else {
                 return redirect()
                     ->route('admin.quotas.create')
                     ->withInput()
-                    ->withErrors(['save' => 'No se puedo salvar']);
+                    ->withErrors(['save' => trans('No se puedo salvar')]);
             }
         } else {
             return redirect()
                 ->route('admin.quotas.create')
                 ->withInput()
-                ->withErrors($validator->errors()->all());
-        }
+                ->withErrors($validator->messages());
+        }*/
+
+        //try {
+            $quota = Quota::create($request->all());
+            $quota->save();
+            return redirect()
+                ->route('admin.quotas.index')
+                ->with(['success_msg' => trans('Se guardó piola.')]);
+        /*} catch(\Dryval\ValidationException $e) {
+            return redirect()
+                ->route('admin.quotas.create')
+                ->withInput()
+                ->withErrors($e->getMessages());
+        }*/      
     }
 
     /**
@@ -96,7 +104,11 @@ class QuotasController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.quotas.edit', ['model' => Quota::find($id)]);
+        return view('admin.quotas.edit', [
+            'form_model' => Quota::find($id),
+            'form_route' => array('admin.quotas.update', $id),
+            'form_method' => 'put'
+        ]);
     }
 
     /**
@@ -108,7 +120,10 @@ class QuotasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $quota = Quota::find($id);
+        $validator = Validator::make($request->all(), Quota::$rules);
+        $a = $validator->passes();
+        dd($validator->messages());
     }
 
     /**

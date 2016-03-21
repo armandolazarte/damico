@@ -6,6 +6,6 @@
     @include('admin.errors')
     @include('admin.success')
 
-    @include('admin.quotas.form', ['model' => $model])
+    @include('admin.quotas.form')
 
 @stop

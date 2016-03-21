@@ -9,7 +9,7 @@
         "laravel/framework": "5.2.*",
         "laravelcollective/html": "5.*",
         "watson/active": "dev-master",
-        "crhayes/validation": "dev-master"
+        "usmanhalalit/dryval": "1.*@dev"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

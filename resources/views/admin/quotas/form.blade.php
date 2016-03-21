@@ -1,4 +1,4 @@
-{!! Form::model($model, ['method' => 'post', 'route' => 'admin.quotas.store']) !!}
+{!! Form::model($form_model, ['method' => $form_method, 'route' => $form_route]) !!}
     {!! Form::hidden('_token', csrf_token()) !!}
     <div class="row">
         <div class="col-md-2">

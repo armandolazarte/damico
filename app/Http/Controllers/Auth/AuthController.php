@@ -80,7 +80,7 @@ class AuthController extends Controller
     public function getLogout()
     {
         Auth::logout();
-        return redirect($this->redirectAfterLogout)->with('success_msg', 'Sesión finalizada exitosamente.');
+        return redirect($this->redirectAfterLogout)->with('success_msg', trans('Sesión finalizada exitosamente.'));
     }
 	
 }

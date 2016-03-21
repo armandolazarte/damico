@@ -45,6 +45,14 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-        return parent::render($request, $e);
+        switch ($e) {
+           case ($e instanceof \Dryval\ValidationException):
+                return \Redirect::back()
+                    ->withErrors($e->getMessages())
+                    ->withInput();
+               break;
+           default:
+               return parent::render($request, $e);
+       }
     }
 }

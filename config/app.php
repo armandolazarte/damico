@@ -158,7 +158,6 @@ return [
 
         Collective\Html\HtmlServiceProvider::class,
         Watson\Active\ActiveServiceProvider::class,
-        Crhayes\Validation\ValidationServiceProvider::class,
 
     ],
 
@@ -209,7 +208,6 @@ return [
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
         'Active'    => Watson\Active\Facades\Active::class,
-        'GroupedValidator' => Crhayes\Validation\Facade::class
 
     ],
 

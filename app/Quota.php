@@ -4,13 +4,22 @@ namespace App;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Dryval\ValidationTrait;
 
 class Quota extends Model
 {
+    use ValidationTrait;
+
     protected $table = 'quota';
     protected $fillable = ['start', 'end', 'size'];
     protected $dates = ['start', 'end'];
     //protected $dateFormat = 'd/m/Y';
+
+    public static $rules = [
+        'start' => 'required|after:yesterday|sarasa:quota,start,end,:id:',
+        'end' => 'required|after:start|sarasa:quota,start,end,:id:',
+        'size' => 'required|integer|min:1|max:100'
+    ];
     
     public function orders()
     {
@@ -19,12 +28,12 @@ class Quota extends Model
 
     public function setStartAttribute($value)
     {
-        $this->attributes['start'] = Carbon::createFromFormat('d/m/Y H:i:s', $value . ' 00:00:00');
+        $this->attributes['start'] = Carbon::createFromFormat('d/m/Y', $value);
     }
 
     public function setEndAttribute($value)
     {
-        $this->attributes['end'] = Carbon::createFromFormat('d/m/Y H:i:s', $value . ' 00:00:00');
+        $this->attributes['end'] = Carbon::createFromFormat('d/m/Y', $value);
     }
 
     public function getStartAttribute($value)
