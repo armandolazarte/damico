@@ -21,14 +21,14 @@
                             @endif
                         @endforeach
                     </div>
+                    <p>Precio: <big><strong>${{ $data->price }}</strong></big></p>
+                    <a href="route('nodriza.order')" class="btn btn-large btn-block btn-info">QUIERO LA MÍA!</a>
                 </div>
                 <div class="col-md-4">
                     <blockquote>
                         <p>Siempre me pareció una picardía ver una pedalboard con una zapatilla llena de transformadores, o con una fuente de importante tamaño ocupando un lugar que tranquilamente podía ser utilizado para más pedales. Por eso, cuando diseñé la Nodriza, traté de que sea lo más pequeña posible y así ocupar el más mínimo espacio en una pedalboard, y a su vez que cumpla perfectamente la función de alimentar y proteger los pedales.</p>
                         <footer>Daniel D'Amico</footer>
-                    </blockquote>   
-                    <!--<p>Precio: <big><strong>$1450</strong></big></p>-->
-                    <!--<button class="btn btn-large btn-block btn-info">QUIERO!</button>-->
+                    </blockquote>
                 </div>
             </div> 
         </div>
