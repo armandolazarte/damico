@@ -22,7 +22,7 @@
                         @endforeach
                     </div>
                     <p>Precio: <big><strong>${{ $data->price }}</strong></big></p>
-                    <a href="{{ route('nodriza.order') }}" class="btn btn-large btn-block btn-info">QUIERO LA MÍA!</a>
+                    <a href="{{ route('nodriza-order') }}" class="btn btn-large btn-block btn-info">QUIERO LA MÍA!</a>
                 </div>
                 <div class="col-md-4">
                     <blockquote>
