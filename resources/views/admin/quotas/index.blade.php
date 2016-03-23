@@ -19,6 +19,7 @@
             <th>Fecha inicio</th>
             <th>Fecha fin</th>
             <th>Cantidad</th>
+            <th>Disponible</th>
             <th>Acciones</th>
         </tr>
         @foreach ($quotas as $quota)
@@ -26,6 +27,7 @@
                 <td>{{ $quota->start }}</td>
                 <td>{{ $quota->end }}</td>
                 <td>{{ $quota->size }}</td>
+                <td>{{ $quota->available }}</td>
                 <td>
                     <ul class="list-inline">
                         <li><a href="{{ route('admin.quotas.edit', $quota->id) }}"><span class="glyphicon glyphicon-pencil"></span></a></li>

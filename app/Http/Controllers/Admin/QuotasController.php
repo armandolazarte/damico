@@ -51,7 +51,12 @@ class QuotasController extends Controller
      */
     public function store(Request $request)
     {        
-        /*$validator = Validator::make($request->all(), Quota::$rules);
+        $rules = [
+            'start' => 'required|dateFormat:d/m/Y|after:yesterday|sarasa:quota,start,end,d/m/Y',
+            'end' => 'required|dateFormat:d/m/Y|after:start|sarasa:quota,start,end,d/m/Y',
+            'size' => 'required|integer|min:1|max:100'
+        ];        
+        $validator = Validator::make($request->all(), $rules);
         if ($validator->passes()) {
             $quota = Quota::create($request->all());
             if ($quota->save()) {
@@ -69,20 +74,13 @@ class QuotasController extends Controller
                 ->route('admin.quotas.create')
                 ->withInput()
                 ->withErrors($validator->messages());
-        }*/
+        }
 
-        //try {
-            $quota = Quota::create($request->all());
-            $quota->save();
-            return redirect()
-                ->route('admin.quotas.index')
-                ->with(['success_msg' => trans('Se guardó piola.')]);
-        /*} catch(\Dryval\ValidationException $e) {
-            return redirect()
-                ->route('admin.quotas.create')
-                ->withInput()
-                ->withErrors($e->getMessages());
-        }*/      
+        /*$quota = Quota::create($request->all());
+        $quota->save();
+        return redirect()
+            ->route('admin.quotas.index')
+            ->with(['success_msg' => trans('Se guardó piola.')]);*/
     }
 
     /**

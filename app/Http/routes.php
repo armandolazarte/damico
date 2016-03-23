@@ -35,9 +35,7 @@ Route::get('/', function() {
     ]);
 });
 
-Route::get('/nodriza', ['as' => 'nodriza', function() {
-    return view('nodriza');
-}]);
+Route::get('/nodriza', ['as' => 'nodriza', 'uses' => 'NodrizaController@getIndex']);
 
 Route::get('/plataformas', ['as' => 'plataformas', function() {
     $data = json_decode(file_get_contents('data/plataformas.json'));
@@ -52,16 +50,10 @@ Route::get('/faq', ['as' => 'faq', function() {
 
 Route::group(['middleware' => ['web']], function() {  
 
-    Route::get('/nodriza/pedido', ['as' => 'nodriza-pedido', function() {
-        die('hoaa');
-        return view('nodriza_pedido');
-    }]);
-
-    Route::post('/nodriza/pedido', function() {
-        return redirect()->route(
-            'nodriza-pedido', 
-            []
-        );
+    Route::group(['prefix' => 'nodriza'], function() {
+        Route::get('/pedido', ['as' => 'nodriza-order', 'uses' => 'NodrizaController@getOrder']);
+        Route::post('/pedido', ['as' => 'nodriza-order-submit', 'uses' => 'NodrizaController@postOrder']);
+        Route::get('/pedido-enviado', ['as' => 'nodriza-order-submitted', 'uses' => 'NodrizaController@getOrderSubmitted']);
     });
 
     Route::get('/auth/login', 'Auth\AuthController@getLogin');       

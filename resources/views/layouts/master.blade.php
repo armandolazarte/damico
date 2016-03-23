@@ -8,10 +8,10 @@
         <link rel="icon" type="image/png" href="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="." />
-        <link media="all" type="text/css" rel="stylesheet" href="css/lib.css" />
-        <link media="all" type="text/css" rel="stylesheet" href="css/damico.css" /> 
+        <link media="all" type="text/css" rel="stylesheet" href="/css/lib.css" />
+        <link media="all" type="text/css" rel="stylesheet" href="/css/damico.css" /> 
         <link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
-        <script src="js/damico.js"></script>     
+        <script src="/js/damico.js"></script>     
     </head>
     <body>
 
@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="col-lg-3">
                     <a href="{{ URL::to('/') }}">
-                        <img src="img/logo.jpg" alt="D'Amico FX" class="img-responsive hidden-xs hidden-sm hidden-md" />
+                        <img src="/img/logo.jpg" alt="D'Amico FX" class="img-responsive hidden-xs hidden-sm hidden-md" />
                     </a>
                 </div>
                 <div class="col-lg-9">
@@ -36,7 +36,7 @@
                         <div class="container-fluid">
                             <div class="navbar-header">
                                 <div class="navbar-brand hidden-lg">
-                                    <img src="img/logo2.png" alt="D'Amico FX" class="img-responsive" />
+                                    <img src="/img/logo2.png" alt="D'Amico FX" class="img-responsive" />
                                 </div>                            
                                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
                                     <span class="sr-only">Toggle navigation</span>

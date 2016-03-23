@@ -8,18 +8,17 @@ use Dryval\ValidationTrait;
 
 class Quota extends Model
 {
-    use ValidationTrait;
+    //use ValidationTrait;
 
     protected $table = 'quota';
-    protected $fillable = ['start', 'end', 'size'];
+    protected $fillable = ['start', 'end', 'size', 'available'];
     protected $dates = ['start', 'end'];
-    //protected $dateFormat = 'd/m/Y';
 
-    public static $rules = [
+    /*public static $rules = [
         'start' => 'required|after:yesterday|sarasa:quota,start,end,:id:',
         'end' => 'required|after:start|sarasa:quota,start,end,:id:',
         'size' => 'required|integer|min:1|max:100'
-    ];
+    ];*/
     
     public function orders()
     {
@@ -35,6 +34,11 @@ class Quota extends Model
     {
         $this->attributes['end'] = Carbon::createFromFormat('d/m/Y', $value);
     }
+
+    public function setAvailableAttribute()
+    {
+        $this->attributes['available'] = $this->attributes['size'];
+    }    
 
     public function getStartAttribute($value)
     {
@@ -52,11 +56,11 @@ class Quota extends Model
         return $query->available($today);
     }
 
-    public function scopeAvailable($query, $date)
+    public function scopeAvailable($query, Carbon $date)
     {
-        $date = Carbon::createFromFormat('d/m/Y', $date);
         return $query
             ->where('start', '<=', $date)
-            ->where('end', '>=', $date);
+            ->where('end', '>=', $date)
+            ->where('available', '>', 0);
     }
 }
