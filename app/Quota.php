@@ -33,12 +33,7 @@ class Quota extends Model
     public function setEndAttribute($value)
     {
         $this->attributes['end'] = Carbon::createFromFormat('d/m/Y', $value);
-    }
-
-    public function setAvailableAttribute()
-    {
-        $this->attributes['available'] = $this->attributes['size'];
-    }    
+    }  
 
     public function getStartAttribute($value)
     {

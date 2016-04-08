@@ -22,7 +22,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 {!! Form::label('customer-email', 'E-mail') !!}
-                                {!! Form::text('customer-email', null, ['id' => 'customer-email', 'class' => 'form-control']) !!}                        
+                                {!! Form::text('customer_email', null, ['id' => 'customer-email', 'class' => 'form-control']) !!}                        
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -31,6 +31,12 @@
                                 {!! Form::text('customer_phone', null, ['id' => 'customer-phone', 'class' => 'form-control', 'maxlength' => 20]) !!}
                             </div>
                         </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                {!! Form::label('quantity', 'Cantidad') !!}
+                                {!! Form::selectRange('quantity', 1, 5, null, ['id' => 'quantity', 'class' => 'form-control']); !!}
+                            </div>
+                        </div>                        
                     </div>
                     <div>
                         {!! Form::button(Lang::get('button.' . action_name()), ['type' => 'submit', 'class' => 'btn btn-info btn-large']) !!}

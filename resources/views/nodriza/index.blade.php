@@ -12,7 +12,7 @@
                     </p>
                     <p>
                         Como si esto fuera poco, la NODRIZA puede alimentar los stompboxes de Line 6 (DL4, MM4, DM4, etc...) sin ningún problema. 
-                        Olvidate de transportar una fuente exclusiva para el DL4 y/o cualquier otro Stompbox Modeler. En fin, <strong>sin la NODRIZA las demás naves no pueden sonar!</strong>
+                        Olvidate de transportar una fuente exclusiva para el DL4 y/o cualquier otro Stompbox Modeler. En fin, <strong><big>¡sin la NODRIZA las demás naves no pueden sonar!</big></strong>
                     </p>
                     <div class="row">
                         @foreach ($data->img as $i => $img)

@@ -59,6 +59,7 @@ class QuotasController extends Controller
         $validator = Validator::make($request->all(), $rules);
         if ($validator->passes()) {
             $quota = Quota::create($request->all());
+            $quota->available = $quota->size;
             if ($quota->save()) {
                 return redirect()
                     ->route('admin.quotas.index')

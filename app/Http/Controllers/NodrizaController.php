@@ -9,6 +9,7 @@ use App\Http\Requests;
 use Validator;
 
 use App\Quota;
+use App\Order;
 
 class NodrizaController extends Controller
 {
@@ -51,14 +52,15 @@ class NodrizaController extends Controller
         ];        
         $validator = Validator::make($request->all(), $rules);
         if ($validator->passes()) {
-            $order = Order::create($request->all());
+            $order = new Order;
             $order->quota()->associate($activeQuota);
-            $paymentMethod = PaymentMethod::find($request->get('id_payment_method'));
-            $order->paymentMethod()->associate($paymentMethod);
-            $shippingMethod = PaymentMethod::find($request->get('id_shipping_method'));
-            $order->shippingMethod()->associate($shippingMethod);
+            //$paymentMethod = PaymentMethod::find($request->get('id_payment_method'));
+            //$order->paymentMethod()->associate($paymentMethod);
+            //$shippingMethod = PaymentMethod::find($request->get('id_shipping_method'));
+            //$order->shippingMethod()->associate($shippingMethod);
+            $order->fill($request->all());
             if ($order->save()) {
-                return redirect()->route('nodriza-order-submitted');
+                return redirect()->route('nodriza-order-submitted')->with(['order_created' => true]);
             } else {
 
             }
@@ -67,8 +69,11 @@ class NodrizaController extends Controller
         }
     }
 
-    public function getOrderSubmitted()
+    public function getOrderSubmitted(Request $request)
     {
+        if (!$request->session()->get('order_created')) {
+            return redirect()->route('nodriza-order');
+        }
         return view('nodriza.order_submitted');
     }
 }
