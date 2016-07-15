@@ -1,4 +1,4 @@
-var sarasa = [
+var commonJs = [
     "./bower_components/jquery/jquery.js",
     //"./bower_components/bootstrap/dist/js/bootstrap.js",
     "./bower_components/bootstrap/js/alert.js",
@@ -8,9 +8,6 @@ var sarasa = [
     "./bower_components/bootstrap/js/tab.js",
     "./bower_components/bootstrap/js/modal.js",
     "./bower_components/ekko-lightbox/dist/ekko-lightbox.min.js",
-    "./bower_components/moment/moment.js",
-    "./bower_components/moment/locale/es.js",
-    "./bower_components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js",
     "./resources/assets/js/*.js"
 ];
                 
@@ -24,7 +21,7 @@ module.exports = function(grunt) {
         },
         concat: {
             scripts: {
-                src: sarasa,
+                src: commonJs,
                 dest: "./public/js/damico.js"
             }
         },        
@@ -34,7 +31,7 @@ module.exports = function(grunt) {
                     mangle: true
                 },                
                 files: {
-                    "./public/js/damico.js": sarasa                 
+                    "./public/js/damico.js": commonJs                 
                 }
             }           
         }, 

@@ -7,9 +7,20 @@ class BuyController extends Controller
 {
     public function getIndex(Request $request)
     {
-        //dd($request->all());
-        $unit_price = (int) $request->input('precio_unitario');
-        $title = $request->input('titulo');
+        $code = $request->input('codigo');
+
+        if (in_array($code, ['pla-gra', 'pla-med', 'pla-chi']) !== false) {
+            $json = json_decode(file_get_contents('data/plataformas.json'));
+            $key = array_search($code, array_column($json, 'code'));
+            $data = $json[$key];
+        } elseif ($code == 'nod') {
+            $data = json_decode(file_get_contents('data/nodriza.json'));            
+        } else {
+            return redirect()->route('home');
+        }
+
+        $unit_price = $data->unit_price;
+        $title = $data->title;
 
         if (!empty($request->input('interlock'))) {
             $unit_price += config('app.interlock_additional_cost');
@@ -24,7 +35,7 @@ class BuyController extends Controller
             ],
             'shipments' => [
                 'mode' => (empty($request->input('pickup'))) ? 'me2' : null,
-                'dimensions' => $request->input('dimensiones')
+                'dimensions' => $data->dimensions
             ],
             'items' => [
                 [
@@ -32,12 +43,13 @@ class BuyController extends Controller
                     'quantity' => 1,
                     'currency_id' => 'ARS',
                     'unit_price' => $unit_price,
-                    'picture_url' => asset('images/' . $request->input('nombre_img'))
+                    'picture_url' => asset('images/' . $data->picture_name)
                 ]
             ]
         ];
 
         $preference = MP::create_preference($preferenceData);
+        $request->session()->put('preference_id', $preference['response']['id']);
         return redirect()->to($preference['response']['init_point']);
     }
 

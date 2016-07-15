@@ -53,7 +53,10 @@ Route::group(['middleware' => ['web']], function() {
     }]);
 
     Route::get('/artistas', ['as' => 'artists', function() {
-        return view('faq');
+        $artists = json_decode(file_get_contents('data/artists.json'));
+        return view('artists', [
+            'artists' => $artists
+        ]);        
     }]);    
 
     Route::get('/preguntas-frecuentes', ['as' => 'faq', function() {

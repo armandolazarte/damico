@@ -1,10 +1,7 @@
 <form class="row mt20 mb20" action="{{ route('buy') }}" method="post">
 
     <?php echo csrf_field(); ?>
-    <input type="hidden" name="titulo" value="{{ $data->title }}" />
-    <input type="hidden" name="precio_unitario" value="{{ $data->unit_price }}" />
-    <input type="hidden" name="dimensiones" value="{{ $data->dimensions }}" />
-    <input type="hidden" name="nombre_img" value="{{ $data->picture_name }}" />
+    <input type="hidden" name="codigo" value="{{ $data->code }}" />
 
     <div class="col-md-6 text-center">
         <p class="mb20">
@@ -33,8 +30,8 @@
                 Prefiero retirar personalmente
             </label>
         </div>        
-            
-        @if (strpos($data->code, 'pla-') != - 1)
+         
+        @if (strpos($data->code, 'pla-') !== false)
             <div class="checkbox mt20">
                 <label>
                     <input type="checkbox" name="interlock" value="300" id="interlock-{{ $data->code }}" /> 

@@ -4,7 +4,7 @@
         "title": "D'Amico - Plataforma Grande",
         "unit_price": 3100,
         "dimensions": "10x65x35,2000",
-        "picture_name": "coco",         
+        "picture_name": "plataforma_grande_1.jpg",         
         "images": ["plataforma_grande_1.jpg", "plataforma_grande_2.jpg"]
     },
     {
@@ -12,15 +12,15 @@
         "title": "D'Amico - Plataforma Mediana",
         "unit_price": 2800,
         "dimensions": "10x50x30,1500",
-        "picture_name": "coco", 
-        "images": ["plataforma_grande_1.jpg", "plataforma_grande_2.jpg"]
+        "picture_name": "plataforma_mediana_1.jpg", 
+        "images": ["plataforma_mediana_1.jpg", "plataforma_mediana_2.jpg", "plataforma_mediana_4.jpg", "plataforma_mediana_5.jpg"]
     },
     {
         "code": "pla-chi",        
         "title": "D'Amico - Plataforma Chica",
         "unit_price": 2600,
         "dimensions": "10x35x30,1000",
-        "picture_name": "coco",  
-        "images": ["plataforma_chica_1.jpg", "plataforma_chica_2.jpg"]
+        "picture_name": "plataforma_chica_1.jpg",  
+        "images": ["plataforma_chica_1.jpg", "plataforma_chica_2.jpg", "plataforma_chica_3.jpg"]
     }
 ]
