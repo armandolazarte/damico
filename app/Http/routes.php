@@ -24,37 +24,46 @@
 |
 */
 
-Route::get('/', function() {
-    return view('welcome', [
-        'carousel_imgs' => [
-            (object) ['file' => 'https://scontent.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/11755657_846122522140524_8561063073405343122_n.jpg?oh=d0cada6070f89dc8aca91cd121f2b24d&oe=5727A143'],
-            (object) ['file' => 'https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/11836869_856275071125269_6082088570319343477_n.jpg?oh=6aecc9ac5d269f404ee1000ed333f182&oe=572839F6&__gda__=1466188871_a821759de189c569e06c3a335cb1ee01'],
-            (object) ['file' => 'https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/10425494_722932117792899_4637318312161528780_n.jpg?oh=5f9bb95bf0f500a09b0e73db1d3f26bc&oe=575889E4&__gda__=1466032696_907062717528400e4e5a107dd2d24adb'],
-            (object) ['file' => 'https://scontent.xx.fbcdn.net/hphotos-ash2/v/t1.0-9/10171714_721130214639756_3497489548159064083_n.jpg?oh=e9b362d0d7299720032f91ef872fade8&oe=57685A6A']
-        ]
-    ]);
-});
-
-Route::get('/nodriza', ['as' => 'nodriza', 'uses' => 'NodrizaController@getIndex']);
-
-Route::get('/plataformas', ['as' => 'plataformas', function() {
-    $data = json_decode(file_get_contents('data/plataformas.json'));
-    return view('plataformas', [
-        'types' => $data
-    ]);
-}]);
-
-Route::get('/faq', ['as' => 'faq', function() {
-    return view('faq');
-}]);
-
 Route::group(['middleware' => ['web']], function() {  
 
-    Route::group(['prefix' => 'nodriza'], function() {
-        Route::get('/pedido', ['as' => 'nodriza-order', 'uses' => 'NodrizaController@getOrder']);
-        Route::post('/pedido', ['as' => 'nodriza-order-submit', 'uses' => 'NodrizaController@postOrder']);
-        Route::get('/pedido-enviado', ['as' => 'nodriza-order-submitted', 'uses' => 'NodrizaController@getOrderSubmitted']);
-    });
+    Route::get('/', ['as' => 'home', function() {
+        return view('welcome', [
+            'carousel_imgs' => [
+                (object) ['file' => 'carousel_1.jpg'],
+                (object) ['file' => 'carousel_2.jpg'],
+                (object) ['file' => 'carousel_3.jpg'],
+                (object) ['file' => 'carousel_4.jpg'],
+                (object) ['file' => 'carousel_5.jpg'],
+            ]
+        ]);
+    }]);
+
+    Route::get('/nodriza', ['as' => 'nodriza', function() {
+        $data = json_decode(file_get_contents('data/nodriza.json'));
+        return view('nodriza', [
+            'data' => $data
+        ]);        
+    }]);
+
+    Route::get('/plataformas', ['as' => 'plataformas', function() {
+        $data = json_decode(file_get_contents('data/plataformas.json'));
+        return view('plataformas', [
+            'types' => $data
+        ]);
+    }]);
+
+    Route::get('/artistas', ['as' => 'artists', function() {
+        return view('faq');
+    }]);    
+
+    Route::get('/preguntas-frecuentes', ['as' => 'faq', function() {
+        return view('faq');
+    }]);
+
+    Route::get('/comprar', ['as' => 'buy', 'uses' => 'BuyController@getIndex']);
+
+    Route::get('/checkout/{result}', ['as' => 'checkout', 'uses' => 'CheckoutController@getIndex'])
+        ->where('result', '(success|failure|pending)');
 
     Route::get('/auth/login', 'Auth\AuthController@getLogin');       
     Route::post('/auth/login', 'Auth\AuthController@postLogin');    
@@ -67,8 +76,7 @@ Route::group(['middleware' => ['web']], function() {
     ], function() {
         Route::get('/', ['as' => 'welcome', function() {
             return view('admin.welcome');
-        }]);
-        Route::resource('quotas', 'QuotasController');  
+        }]);        
     });
 
 });

@@ -158,6 +158,9 @@ return [
 
         Collective\Html\HtmlServiceProvider::class,
         Watson\Active\ActiveServiceProvider::class,
+        SantiGraviano\LaravelMercadoPago\Providers\MercadoPagoServiceProvider::class,
+
+        App\Providers\FormServiceProvider::class        
 
     ],
 
@@ -208,6 +211,7 @@ return [
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
         'Active'    => Watson\Active\Facades\Active::class,
+        'MP'        => SantiGraviano\LaravelMercadoPago\Facades\MP::class
 
     ],
 

@@ -1,8 +1,7 @@
 {
-    "img": [
-        "https://4.bp.blogspot.com/_joRWr1cH5nw/TRuQZhc-GoI/AAAAAAAAAFQ/ZXK9fhgVBdw/s320/DSCN0715.JPG",
-        "https://4.bp.blogspot.com/_joRWr1cH5nw/TRuQuUHVpRI/AAAAAAAAAFU/A90KDPGD0BU/s320/DSCN0709.JPG",
-        "http://4.bp.blogspot.com/_joRWr1cH5nw/TRuQ__-uisI/AAAAAAAAAFc/QXJ4GnprnGU/s1600/DSCN0727.JPG"
-    ],
-    "price": 1450
+    "img": ["nodriza_1.jpg", "nodriza_2.jpg", "nodriza_3.jpg"],
+    "title": "Nodriza",
+    "unit_price": 1450,
+    "dimensions": "30x30x30,500",
+    "picture_name": "coco"
 }

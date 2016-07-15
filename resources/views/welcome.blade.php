@@ -3,19 +3,16 @@
 @section('content')             
 
     <div id="carousel-home" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
         <ol class="carousel-indicators">
-            <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-home" data-slide-to="1"></li>
-            <li data-target="#carousel-home" data-slide-to="2"></li>
-            <li data-target="#carousel-home" data-slide-to="3"></li>
+            @foreach ($carousel_imgs as $k => $img)
+                <li data-target="#carousel-home" data-slide-to="{{ $k }}" class="<?php if ($k == 0) { echo ' active'; } ?>"></li>
+            @endforeach
         </ol>
 
-        <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             @foreach ($carousel_imgs as $k => $img)
                 <div class="item<?php if ($k == 0) { echo ' active'; } ?>">
-                    <img src="{{ $img->file }}" alt="..." />
+                    <img src="img/{{ $img->file }}" alt="..." style="max-width: 100%; width: 100%; max-height: 200px; vertical-align: middle;" />
                     <div class="carousel-caption">
                     </div>
                 </div>

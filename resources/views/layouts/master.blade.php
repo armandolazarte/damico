@@ -10,7 +10,6 @@
         <meta name="description" content="." />
         <link media="all" type="text/css" rel="stylesheet" href="/css/lib.css" />
         <link media="all" type="text/css" rel="stylesheet" href="/css/damico.css" /> 
-        <link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
         <script src="/js/damico.js"></script>     
     </head>
     <body>
@@ -27,7 +26,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
-                    <a href="{{ URL::to('/') }}">
+                    <a href="{{ route('home') }}">
                         <img src="/img/logo.jpg" alt="D'Amico FX" class="img-responsive hidden-xs hidden-sm hidden-md" />
                     </a>
                 </div>
@@ -50,7 +49,7 @@
                                 <ul id="nav-main" class="nav navbar-nav">
                                     <li class="{{ active('nodriza') }}"><a href="{{ route('nodriza') }}">NODRIZA</a></li>
                                     <li class="{{ active('plataformas') }}"><a href="{{ route('plataformas') }}">PLATAFORMAS</a></li>
-                                    <li><a href="">ARTISTAS</a></li>
+                                    <li class="{{ active('artists') }}"><a href="{{ route('artists') }}">ARTISTAS</a></li>
                                     <li class="{{ active('faq') }}"><a href="{{ route('faq') }}">PREGUNTAS FRECUENTES</a></li>
                                 </ul>
                                 <ul id="social" class="nav navbar-nav navbar-right">
@@ -67,8 +66,16 @@
 
             <div id="content">
                 @yield('content')
-            </div>
+            </div>            
 
         </div>
+
+        <footer class="mb20" style="margin-top: 50px;">
+            <ul class="list-inline text-center">
+                <li><small><span class="glyphicon glyphicon-copyright-mark"></span> D'Amico FXS</small></li>
+                <li><small><span class="fa fa-facebook-square"></span> /damicoefectos</small></li>
+                <li><small><span class="glyphicon glyphicon-envelope"></span> damicofxs@hotmail.com</small></li>
+            </ul>    
+        </footer>
     </body>
 </html>
