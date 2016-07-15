@@ -28,8 +28,8 @@
             El costo de envío será informado a continuación.
         </div>
         <p class="mt20">
-            <input type="checkbox" name="pickup" value="1" id="pickup-{{ strtolower($data->code) }}" onclick="$(this).closest('.row').find('.alert-shipping-cost').toggleClass('hide');" /> 
-            <label for="pickup-{{ strtolower($data->code) }}">Prefiero retirar personalmente</label>
+            <input type="checkbox" name="pickup" value="1" id="pickup-{{ $data->code }}" onclick="$(this).closest('.row').find('.alert-shipping-cost').toggleClass('hide');" /> 
+            <label for="pickup-{{ $data->code }}">Prefiero retirar personalmente</label>
         </p>
     </div>
 </form>

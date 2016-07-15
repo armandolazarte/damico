@@ -9,19 +9,19 @@
                 <div class="col-md-8">
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#grande" aria-controls="grande" role="tab" data-toggle="tab">GRANDE 65x35</a></li>
-                        <li role="presentation"><a href="#mediana" aria-controls="mediana" role="tab" data-toggle="tab">MEDIANA 50x30</a></li>
-                        <li role="presentation"><a href="#chica" aria-controls="chica" role="tab" data-toggle="tab">CHICA 35x30</a></li>
+                        <li role="presentation" class="active"><a href="#pla-gra" aria-controls="pla-gra" role="tab" data-toggle="tab">GRANDE 65x35</a></li>
+                        <li role="presentation"><a href="#pla-med" aria-controls="pla-med" role="tab" data-toggle="tab">MEDIANA 50x30</a></li>
+                        <li role="presentation"><a href="#pla-chi" aria-controls="pla-chi" role="tab" data-toggle="tab">CHICA 35x30</a></li>
                     </ul>
 
                     <!-- Tab panes -->
                     <div class="tab-content" style="padding: 20px;">
                         @foreach ($types as $type)
-                            <div role="tabpanel" class="tab-pane<?php if ($type->name == 'grande') { echo ' active'; } ?>" id="{{ $type->name }}">
+                            <div role="tabpanel" class="tab-pane<?php if ($type->code == 'pla-gra') { echo ' active'; } ?>" id="{{ $type->code }}">
                                 <div class="row">
                                     @foreach ($type->images as $i => $img)
                                         <div class="col-md-4 col-sm-6">
-                                            <a href="img/{{ $img }}" class="thumbnail" data-toggle="lightbox" data-gallery="{{ $type->name }}">
+                                            <a href="img/{{ $img }}" class="thumbnail" data-toggle="lightbox" data-gallery="{{ $type->code }}">
                                                 <img src="img/{{ $img }}" class="img-responsive" />
                                             </a>
                                         </div>
