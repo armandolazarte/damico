@@ -1,5 +1,5 @@
 {
-  "name": "Damico",
+  "name": "damico",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -13,7 +13,6 @@
     "components-font-awesome": "~4.2.0",
     "bootstrap": "~3.3.4",
     "ekko-lightbox": "4.0.1",
-    "moment": "^2.12.0",
-    "eonasdan-bootstrap-datetimepicker": "^4.17.37"
+    "gamma": "*"
   }
 }
