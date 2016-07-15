@@ -15,7 +15,7 @@ class BuyController extends Controller
                 'pending' => route('checkout', 'pending')
             ],
             'shipments' => [
-                'mode' => (empty($request->input('sarasa'))) ? 'me2' : null,
+                'mode' => (empty($request->input('pickup'))) ? 'me2' : null,
                 'dimensions' => $request->input('dimensiones')
             ],
             'items' => [

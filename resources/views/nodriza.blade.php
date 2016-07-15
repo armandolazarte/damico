@@ -34,9 +34,7 @@
                     </div>
                     <div>
                         @include('buy', ['data' => $data])
-                    </div>                    
-                    <div class="row">
-                    </div>                    
+                    </div>                   
                                         
                 </div>
                 <div class="col-md-4">

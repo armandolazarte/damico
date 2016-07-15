@@ -1,5 +1,6 @@
-<form class="row mt20 mb20" action="{{ route('buy') }}">
+<form class="row mt20 mb20" action="{{ route('buy') }}" method="post">
 
+    <?php echo csrf_field(); ?>
     <input type="hidden" name="titulo" value="{{ $data->title }}" />
     <input type="hidden" name="precio_unitario" value="{{ $data->unit_price }}" />
     <input type="hidden" name="dimensiones" value="{{ $data->dimensions }}" />
@@ -27,8 +28,8 @@
             El costo de envío será informado a continuación.
         </div>
         <p class="mt20">
-            <input type="checkbox" name="sarasa" value="1" id="coco" onclick="$(this).closest('.row').find('.alert-shipping-cost').toggleClass('hide');" /> 
-            <label for="coco">Prefiero retirar personalmente</label>
+            <input type="checkbox" name="pickup" value="1" id="pickup-{{ strtolower($type->code) }}" onclick="$(this).closest('.row').find('.alert-shipping-cost').toggleClass('hide');" /> 
+            <label for="pickup-{{ strtolower($type->code) }}">Prefiero retirar personalmente</label>
         </p>
     </div>
 </form>

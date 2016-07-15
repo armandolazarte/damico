@@ -72,7 +72,7 @@
 
         <footer class="mb20" style="margin-top: 50px;">
             <ul class="list-inline text-center">
-                <li><small><span class="glyphicon glyphicon-copyright-mark"></span> D'Amico FXS</small></li>
+                <li><small><span class="glyphicon glyphicon-copyright-mark"></span> D'Amico FX</small></li>
                 <li><small><span class="fa fa-facebook-square"></span> /damicoefectos</small></li>
                 <li><small><span class="glyphicon glyphicon-envelope"></span> damicofxs@hotmail.com</small></li>
             </ul>    

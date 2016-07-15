@@ -60,7 +60,7 @@ Route::group(['middleware' => ['web']], function() {
         return view('faq');
     }]);
 
-    Route::get('/comprar', ['as' => 'buy', 'uses' => 'BuyController@getIndex']);
+    Route::post('/comprar', ['as' => 'buy', 'uses' => 'BuyController@getIndex']);
 
     Route::get('/checkout/{result}', ['as' => 'checkout', 'uses' => 'CheckoutController@getIndex'])
         ->where('result', '(success|failure|pending)');

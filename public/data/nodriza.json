@@ -1,7 +1,8 @@
 {
+    "code": "NOD",
     "img": ["nodriza_1.jpg", "nodriza_2.jpg", "nodriza_3.jpg"],
-    "title": "Nodriza",
+    "title": "D'Amico - Fuente de Alimentación Nodriza",
     "unit_price": 1450,
-    "dimensions": "30x30x30,500",
+    "dimensions": "5x12x6,100",
     "picture_name": "coco"
 }

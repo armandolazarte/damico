@@ -1,32 +1,31 @@
 [
     {
+        "code": "PLA-GRA",
         "name": "grande",
         "size": "65x35",
-        "title": "Plataforma Grande",
+        "title": "D'Amico - Plataforma Grande",
         "unit_price": 1450,
-        "dimensions": "30x30x30,500",
+        "dimensions": "5x65x35,2000",
         "picture_name": "coco",         
         "images": ["plataforma_grande_1.jpg", "plataforma_grande_2.jpg"]
     },
     {
+        "code": "PLA-MED",
         "name": "mediana", 
         "size": "50x30",
-        "title": "Plataforma Mediana",
+        "title": "D'Amico - Plataforma Mediana",
         "unit_price": 1450,
-        "dimensions": "30x30x30,500",
+        "dimensions": "5x50x30,1500",
         "picture_name": "coco", 
-        "images": [
-            "http://4.bp.blogspot.com/-MR-6qKa02XM/VDSg2qRWAVI/AAAAAAAAAJU/ac3NDauQ36g/s1600/07.JPG", 
-            "https://scontent-gru2-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10012564_721131257972985_7462565027252146987_n.jpg?oh=42e9a754500d4db815bc40aa1b9a04e7&oe=5724C7AF", 
-            "http://1.bp.blogspot.com/-9OiYDeV59MQ/VlXKFfTYCaI/AAAAAAAAARE/Qp75iiFCd1Y/s1600/Pl%2B1.jpg"
-        ]
+        "images": ["plataforma_grande_1.jpg", "plataforma_grande_2.jpg"]
     },
     {
+        "code": "PLA-CHI",
         "name": "chica",
         "size": "35x30", 
-        "title": "Plataforma Chica",
+        "title": "D'Amico - Plataforma Chica",
         "unit_price": 1450,
-        "dimensions": "30x30x30,500",
+        "dimensions": "5x35x30,1000",
         "picture_name": "coco",  
         "images": ["plataforma_chica_1.jpg", "plataforma_chica_2.jpg"]
     }
