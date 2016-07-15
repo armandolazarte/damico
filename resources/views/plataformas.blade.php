@@ -54,7 +54,6 @@
                             <li>Inclinación para un mejor acceso a los pedales más lejanos.</li>
                             <li>Posibilidad de alojar fuentes, sistemas inalámbricos, etc. debajo de la PLATAFORMA, logrando más lugar en la superficie.</li>
                             <li>Para los exigentes del vivo, adhesivo fluorescente para señalizar la PLATAFORMA, pedales, controles y todos esos lugares que se necesita ver para optimizar el desempeño sobre el escenario.</li>
-                            <li>Opcional alimentación directa a 220v por cable interlock ($200).</li>
                         </ul>
                     </div>
                 </div>          

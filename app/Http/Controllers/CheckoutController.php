@@ -18,17 +18,17 @@ class CheckoutController extends Controller
         
         switch ($result) {
             case 'success':
-                $text = trans('alerts.chekcout.success');
+                $text = 'Gracias por tu compra!';
                 $cssClass = 'success';
                 break;
             case 'failure':
                 if ($request->input('payment_type') == 'null') {
                     return redirect()->route('home');
                 }
-                $text = trans('alerts.checkout.failure');
+                $text = 'Ocurrió un error con el pago.';
                 $cssClass = 'warning';
             case 'pending':
-                $text = trans('alerts.checkout.pending');
+                $text = 'El pago se encuentra pendiente.';
                 $cssClass = 'warning';
                 break;
         }

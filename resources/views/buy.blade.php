@@ -27,9 +27,20 @@
         <div class="alert alert-warning alert-shipping-cost">
             El costo de envío será informado a continuación.
         </div>
-        <p class="mt20">
-            <input type="checkbox" name="pickup" value="1" id="pickup-{{ $data->code }}" onclick="$(this).closest('.row').find('.alert-shipping-cost').toggleClass('hide');" /> 
-            <label for="pickup-{{ $data->code }}">Prefiero retirar personalmente</label>
-        </p>
+        <div class="checkbox mt20">
+            <label>
+                <input type="checkbox" name="pickup" value="1" id="pickup-{{ $data->code }}" onclick="$(this).closest('.row').find('.alert-shipping-cost').toggleClass('hide');" /> 
+                Prefiero retirar personalmente
+            </label>
+        </div>        
+            
+        @if (strpos($data->code, 'pla-') != - 1)
+            <div class="checkbox mt20">
+                <label>
+                    <input type="checkbox" name="interlock" value="300" id="interlock-{{ $data->code }}" /> 
+                    Opcional alimentación directa a 220v por cable interlock (${{ config('app.interlock_additional_cost') }})
+                </label>
+            </div>
+        @endif
     </div>
 </form>
