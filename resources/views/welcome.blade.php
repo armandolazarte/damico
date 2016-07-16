@@ -20,7 +20,19 @@
         </div>
     </div>
 
-    <p style="margin-top: 40px;">Somos una empresa argentina dedicada a la fabricación de equipamiento para guitarristas y bajistas. Si bien a principios de 2010 la principal actividad era la fabricación de pedales, hoy en día estamos avocados a todo lo que es necesario para que un sistema de efectos funcione en forma correcta y cómoda, ofreciendo al público la fuente de alimentación Nodriza, Plataformas para pedales y linkeo y armado de sistemas de efectos, tanto en la línea de alimentación como en la de audio, todo firme y prolijo para que solo te preocupes por tocar.</p>
-    <p>Contamos con el apoyo de grandes artistas que usan nuestros productos de manera profesional como Marilina Bertoldi, Baltasar Comotto, Pat Tomaselli, Lula Bertoldi, Brenda Martin, Manuel Quieto, Andrés Giménez, Gaspar Benegas, Lisardo Alverez, Hernán Rupolo, Ricardo Verdirame, Franchie Barreiro y Nico Bereciartua, entre otros.</p>        
+    <p style="margin-top: 40px;">
+        Somos una empresa argentina dedicada a la fabricación de equipamiento para guitarristas y bajistas. 
+        Si bien a principios de 2010 la principal actividad era la fabricación de pedales, hoy en día estamos avocados 
+        a todo lo que es necesario para que un sistema de efectos funcione en forma correcta y cómoda, ofreciendo al 
+        público la fuente de alimentación Nodriza, Plataformas para pedales y linkeo y armado de sistemas de efectos, 
+        tanto en la línea de alimentación como en la de audio. Todo firme y prolijo para que sólo te preocupes 
+        por tocar.
+    </p>
+    <p>
+        Contamos con el apoyo de grandes artistas que usan nuestros productos de manera profesional como 
+        Marilina Bertoldi, Baltasar Comotto, Pat Tomaselli, Lula Bertoldi, Brenda Martin, Manuel Quieto, 
+        Andrés Giménez, Gaspar Benegas, Lisardo Alverez, Hernán Rupolo, Ricardo Verdirame, Franchie Barreiro y 
+        Nico Bereciartua, entre otros.
+    </p>
 
 @stop              

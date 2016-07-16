@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')  
-    <h2 class="mb20">Artistas</h2>
+    <h2 class="mb20">Artistas que usan nuestros productos</h2>
     <section id="artists">
         @foreach ($artists as $artist)
             <a href="img/{{ $artist->filename }}" data-toggle="lightbox" data-gallery="artists" data-title="{{ $artist->name }}">

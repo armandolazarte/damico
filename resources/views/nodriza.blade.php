@@ -45,7 +45,9 @@
                 </div>
             </div>
 
-            @include('fb_comments')
+            <div class="row">
+                <div class="col-md-8">@include('fb_comments')</div>
+            </div> 
         </div>
     </div> 
 
