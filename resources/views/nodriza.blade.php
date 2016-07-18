@@ -28,13 +28,8 @@
                             @endif
                         @endforeach
                     </div>
-                    <div>
-                        <p>Precio: <big><strong>${{ $data->unit_price }}</strong></big></p>
-                        <p><span class="glyphicon glyphicon-registration-mark"></span> Modelo patentado</p>
-                    </div>
-                    <div>
-                        @include('buy', ['data' => $data])
-                    </div>                   
+                    @include('price', ['price' => $data->unit_price])
+                    @include('buy', ['data' => $data])
                                         
                 </div>
                 <div class="col-md-4">

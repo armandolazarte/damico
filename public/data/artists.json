@@ -1,46 +1,82 @@
 [
     {
         "name": "Andrés Giménez",
-        "filename": "andres_gimenez.jpg"
+        "projects": ["A.N.I.M.A.L.", "D-Mente", "De La Tierra"],
+        "filename": "artista_andres_gimenez.jpg"
     },
     {
-        "name": "Gaspar Benegas - Indio Solari y Los Fundamentalistas del Aire Acondicionado",
-        "filename": "gaspar_benegas.jpg"
+        "name": "Gaspar Benegas",
+        "projects": ["Las Manos de Filippi", "Indio Solari"],
+        "filename": "artista_gaspar_benegas.jpg"
     },    
     {
-        "name": "Agustín Cerezo - Pier",
-        "filename": "agustin_cerezo_pier.jpg"
+        "name": "Agustín Cerezo",
+        "projects": ["Pier"],
+        "filename": "artista_agustin_cerezo.jpg"
     },
     {
-        "name": "Lula Bertoldi - Eruca Sativa",
-        "filename": "lula_bertoldi_eruca_sativa.jpg"
+        "name": "Lula Bertoldi",
+        "projects": ["Eruca Sativa"],
+        "filename": "artista_lula_bertoldi.jpg"
     },
     {
-        "name": "Tery Langer - Carajo",
-        "filename": "tery_langer_carajo.jpg"
+        "name": "Tery Langer",
+        "projects": ["Carajo"],
+        "filename": "artista_tery_langer.jpg"
     },
     {
         "name": "Carina Alfie",
-        "filename": "carina_alfie.jpg"
+        "projects": ["Carina Alfie"],
+        "filename": "artista_carina_alfie.jpg"
     },
     {
-        "name": "Pablo Mondello - Massacre",
-        "filename": "pablo_mondello_massacre_2.jpg"
+        "name": "Pablo Mondello",
+        "projects": ["Massacre"],
+        "filename": "artista_pablo_mondello.jpg"
     },
     {
-        "name": "Juanjo Gaspar - Jóvenes Pordioseros",
-        "filename": "juanjo_gaspar_jovenes_pordioseros.jpg"
+        "name": "Juanjo Gaspar",
+        "projects": ["Jóvenes Pordioseros"],
+        "filename": "artista_juanjo_gaspar.jpg"
     },
     {
-        "name": "Nico Bereciartua - Viticus",
-        "filename": "nico_bereciartua_viticus.jpg"
+        "name": "Nico Bereciartua",
+        "projects": ["Viticus"],
+        "filename": "artista_nico_bereciartua.jpg"
     },
     {
         "name": "Andrea Álvarez",
-        "filename": "andrea_alvarez.jpg"
+        "projects": ["Andrea Álvarez"],
+        "filename": "artista_andrea_alvarez.jpg"
     },
     {
-        "name": "Aldana Arguen - Axel",
-        "filename": "aldana_arguen_axel.jpg"
-    }    
+        "name": "Aldana Arguen",
+        "projects": ["Axel"],
+        "filename": "artista_aldana_arguen.jpg"
+    },
+    {
+        "name": "Julio Breshnev",
+        "projects": ["Vetamadre"],
+        "filename": "artista_julio_breshnev.jpg"
+    },
+    {
+        "name": "Flavio Cianciarulo",
+        "projects": ["Los Fabulosos Cadillacs", "Sr. Flavio", "De La Tierra"],
+        "filename": "artista_flavio_cianciarulo.jpg"
+    },
+    {
+        "name": "Baltasar Comotto",
+        "projects": ["Baltasar Comotto", "L.A. Spinetta", "Indio Solari"],
+        "filename": "artista_baltasar_comotto.jpg"
+    },
+    {
+        "name": "Rafa Nasta",
+        "projects": ["Nasta Súper"],
+        "filename": "artista_rafa_nasta.jpg"
+    },    
+    {
+        "name": "Mancha de Rolando",
+        "projects": ["Mancha de Rolando"],
+        "filename": "artista_mancha_de_rolando.jpg"
+    }
 ]

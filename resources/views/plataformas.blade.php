@@ -31,10 +31,7 @@
                                         @endif
                                     @endforeach
                                 </div>
-                                <div class="mb20">
-                                    <p>Precio: <big><strong>${{ $type->unit_price }}</strong></big></p>
-                                    <p><span class="glyphicon glyphicon-registration-mark"></span> Modelo patentado</p>
-                                </div>
+                                @include('price', ['price' => $type->unit_price])
                                 @include('buy', ['data' => $type])                              
                             </div>
                         @endforeach

@@ -28,11 +28,5 @@
         tanto en la línea de alimentación como en la de audio. Todo firme y prolijo para que sólo te preocupes 
         por tocar.
     </p>
-    <p>
-        Contamos con el apoyo de grandes artistas que usan nuestros productos de manera profesional como 
-        Marilina Bertoldi, Baltasar Comotto, Pat Tomaselli, Lula Bertoldi, Brenda Martin, Manuel Quieto, 
-        Andrés Giménez, Gaspar Benegas, Lisardo Alverez, Hernán Rupolo, Ricardo Verdirame, Franchie Barreiro y 
-        Nico Bereciartua, entre otros.
-    </p>
 
 @stop              

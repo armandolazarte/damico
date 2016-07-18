@@ -32,7 +32,7 @@ class CheckoutController extends Controller
                 $cssClass = 'warning';
                 break;
         }
-        return view('checkout/index', [
+        return view('checkout', [
             'text' => $text,
             'cssClass' => $cssClass
         ]);
