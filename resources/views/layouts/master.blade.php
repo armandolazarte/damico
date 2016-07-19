@@ -25,16 +25,16 @@
     
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
-                    <a href="{{ route('home') }}">
-                        <img src="/img/logo.jpg" alt="D'Amico FX" class="img-responsive hidden-xs hidden-sm hidden-md" />
-                    </a>
+                <div class="col-lg-3 col-md-3">
+                    <a href="{{ route('home') }}" class="hidden-sm hidden-xs">
+                        <img src="/img/logo.jpg" alt="D'Amico FX" class="img-responsive" />
+                    </a>                 
                 </div>
-                <div class="col-lg-9">
+                <div class="col-lg-9 col-md-9">
                     <nav class="navbar navbar-inverse">
                         <div class="container-fluid">
                             <div class="navbar-header">
-                                <div class="navbar-brand hidden-lg">
+                                <div class="navbar-brand hidden-lg hidden-md">
                                     <img src="/img/logo2.png" alt="D'Amico FX" class="img-responsive" />
                                 </div>                            
                                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
@@ -47,17 +47,19 @@
 
                             <div class="collapse navbar-collapse" id="navbar">
                                 <ul id="nav-main" class="nav navbar-nav">
-                                    <li class="dropdown">                             
-                                        <a data-toggle="dropdown" class="dropdown-toggle" href="">                              
+                                    <li class="dropdown hidden-md hidden-lg">
+                                        <a data-toggle="dropdown" class="dropdown-toggle" href="">
                                             @lang('PRODUCTOS') <span class="caret"></span>
-                                        </a>                                 
+                                        </a>
                                         <ul class="dropdown-menu">
                                             <li class="{{ active('nodriza') }}"><a href="{{ route('nodriza') }}">NODRIZA</a></li>
                                             <li class="{{ active('plataformas') }}"><a href="{{ route('plataformas') }}">PLATAFORMAS</a></li>
-                                        </ul>                                
+                                        </ul>
                                     </li>
+                                    <li class="{{ active('nodriza') }} hidden-xs hidden-sm"><a href="{{ route('nodriza') }}">NODRIZA</a></li>
+                                    <li class="{{ active('plataformas') }} hidden-xs hidden-sm"><a href="{{ route('plataformas') }}">PLATAFORMAS</a></li>
                                     <li class="{{ active('artists') }}"><a href="{{ route('artists') }}">ARTISTAS</a></li>
-                                    <li class="{{ active('faq') }}"><a href="{{ route('faq') }}">FAQ</a></li>
+                                    <li class="{{ active('faq') }}"><a href="{{ route('faq') }}">PREGUNTAS FRECUENTES</a></li>
                                 </ul>
                                 <ul id="social" class="nav navbar-nav navbar-right">
                                     <li><a href="https://www.facebook.com/damicoefectos" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>

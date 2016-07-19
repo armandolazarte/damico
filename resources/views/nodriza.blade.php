@@ -3,7 +3,7 @@
 @section('content') 
     <div class="panel">
         <div class="panel-body">   
-            <h2>Nodriza</h2>
+            <h1>Nodriza</h1>
             <div class="row">
                 <div class="col-md-8">
                     <p>
@@ -14,6 +14,13 @@
                         Como si esto fuera poco, la NODRIZA puede alimentar los stompboxes de Line 6 (DL4, MM4, DM4, etc...) sin ningún problema. 
                         Olvidate de transportar una fuente exclusiva para el DL4 y/o cualquier otro Stompbox Modeler. En fin, <strong><big>¡sin la NODRIZA las demás naves no pueden sonar!</big></strong>
                     </p>
+                    <h2>Especificaciones técnicas</h2>
+                    <dl class="dl-horizontal">
+                        <dt>Voltaje</dt>
+                        <dd>9v</dd>
+                        <dt>Voltaje</dt>
+                        <dd>9v</dd>                        
+                    </dl>
                     <div class="row">
                         @foreach ($data->img as $i => $img)
                             <div class="col-md-4 col-sm-6">

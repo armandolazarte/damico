@@ -43,6 +43,5 @@
 </form>
 
 <div class="alert alert-warning">
-    <h3>¡Importante!</h3>
-    <p>El tiempo de entrega está sujeto a disposición de stock.</p>
+    <strong>¡Importante!</strong> El tiempo de entrega está sujeto a disposición de stock.
 </div>

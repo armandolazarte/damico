@@ -3,7 +3,7 @@
 @section('content') 
     <div class="panel">   
         <div class="panel-body">
-            <h2 class="mb20">Plataformas</h2>
+            <h1>Plataformas</h1>
             <div class="row">
                 <div class="col-md-8">
                     <!-- Nav tabs -->

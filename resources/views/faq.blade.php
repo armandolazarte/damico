@@ -3,7 +3,7 @@
 @section('content') 
     <div class="panel">
         <div class="panel-body">
-            <h2>Preguntas frecuentes</h2>
+            <h1>Preguntas frecuentes</h1>
             <dl>
                 <dt>¿Hacen envíos?</dt>
                 <dd>Sí, hacemos envíos (costo a cargo del comprador) por Correo Argentino, OCA o Vía Cargo.</dd>
