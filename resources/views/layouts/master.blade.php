@@ -47,10 +47,17 @@
 
                             <div class="collapse navbar-collapse" id="navbar">
                                 <ul id="nav-main" class="nav navbar-nav">
-                                    <li class="{{ active('nodriza') }}"><a href="{{ route('nodriza') }}">NODRIZA</a></li>
-                                    <li class="{{ active('plataformas') }}"><a href="{{ route('plataformas') }}">PLATAFORMAS</a></li>
+                                    <li class="dropdown">                             
+                                        <a data-toggle="dropdown" class="dropdown-toggle" href="">                              
+                                            @lang('PRODUCTOS') <span class="caret"></span>
+                                        </a>                                 
+                                        <ul class="dropdown-menu">
+                                            <li class="{{ active('nodriza') }}"><a href="{{ route('nodriza') }}">NODRIZA</a></li>
+                                            <li class="{{ active('plataformas') }}"><a href="{{ route('plataformas') }}">PLATAFORMAS</a></li>
+                                        </ul>                                
+                                    </li>
                                     <li class="{{ active('artists') }}"><a href="{{ route('artists') }}">ARTISTAS</a></li>
-                                    <li class="{{ active('faq') }}"><a href="{{ route('faq') }}">PREGUNTAS FRECUENTES</a></li>
+                                    <li class="{{ active('faq') }}"><a href="{{ route('faq') }}">FAQ</a></li>
                                 </ul>
                                 <ul id="social" class="nav navbar-nav navbar-right">
                                     <li><a href="https://www.facebook.com/damicoefectos" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
@@ -58,9 +65,6 @@
                             </div>                    
                         </div>
                     </nav>
-                    <div class="text-right">
-                        <span class="glyphicon glyphicon-envelope" style="margin-right: 6px;"></span>damicofxs@hotmail.com 
-                    </div>
                 </div>
             </div>
 
