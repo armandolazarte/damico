@@ -57,10 +57,6 @@ Route::group(['middleware' => ['web']], function() {
         return view('artists', [
             'artists' => $artists
         ]);        
-    }]);    
-
-    Route::get('/preguntas-frecuentes', ['as' => 'faq', function() {
-        return view('faq');
     }]);
 
     Route::post('/comprar', ['as' => 'buy', 'uses' => 'BuyController@getIndex']);

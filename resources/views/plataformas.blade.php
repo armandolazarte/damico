@@ -31,7 +31,11 @@
                                         @endif
                                     @endforeach
                                 </div>
-                                @include('price', ['price' => $type->unit_price])
+                                <div class="mb20">
+                                    <p>Precio: <big><strong>${{ $type->unit_price }}</strong></big></p>
+                                    <p>Entran {{ $type->pedal_count }} pedales de tipo Boss/MXR.</p>
+                                    <p><small><span class="glyphicon glyphicon-registration-mark"></span> Modelo patentado</small></p>
+                                </div>                                
                                 @include('buy', ['data' => $type])                              
                             </div>
                         @endforeach
@@ -52,6 +56,13 @@
                             <li>Para los exigentes del vivo, adhesivo fluorescente para señalizar la PLATAFORMA, pedales, controles y todos esos lugares que se necesita ver para optimizar el desempeño sobre el escenario.</li>
                         </ul>
                     </div>
+                    <div class="info mb20">
+                        <h3>Consideraciones</h3>                    
+                        <ul>
+                            <li>Las medidas de las Plataformas son de fábrica. No hacemos tamaños a pedido ni las personalizamos con nombres.</li>
+                            <li>Las Plataformas no traen la Nodriza incluída. Son dos productos diferentes que se pueden combinar en una misma compra.</li>
+                        </ul>
+                    </div>                    
                 </div>          
             </div>
 

@@ -59,7 +59,6 @@
                                     <li class="{{ active('nodriza') }} hidden-xs hidden-sm"><a href="{{ route('nodriza') }}">NODRIZA</a></li>
                                     <li class="{{ active('plataformas') }} hidden-xs hidden-sm"><a href="{{ route('plataformas') }}">PLATAFORMAS</a></li>
                                     <li class="{{ active('artists') }}"><a href="{{ route('artists') }}">ARTISTAS</a></li>
-                                    <li class="{{ active('faq') }}"><a href="{{ route('faq') }}">PREGUNTAS FRECUENTES</a></li>
                                 </ul>
                                 <ul id="social" class="nav navbar-nav navbar-right">
                                     <li><a href="https://www.facebook.com/damicoefectos" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
